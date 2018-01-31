@@ -2,7 +2,7 @@ class Parking < ApplicationRecord
   validates_presence_of :parking_type, :start_at
   #parking_type 的值只能是 ["guest", "short-term", "long-term"] 其中之一
   validates_inclusion_of :parking_type, :in => ["guest", "short-term", "long-term"]
-
+belongs_to :user, :optional => true
   validate :validate_end_at_with_amount
     # end_at 和 amount 需要一起填。
   def validate_end_at_with_amount
