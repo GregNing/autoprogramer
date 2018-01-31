@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Autoprogram
   class Application < Rails::Application
+    config.time_zone = "Taipei"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
